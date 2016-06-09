@@ -1,0 +1,107 @@
+﻿
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title></title>
+    <link href="~/Content/owl.carousel.css" rel="stylesheet" />
+    <link href="~/Content/owl.transitions.css" rel="stylesheet" />
+    <link href="~/Content/owl.theme.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/style.css" rel="stylesheet" />
+        <asp:ContentPlaceHolder ID="head" runat="server">
+            
+        </asp:ContentPlaceHolder>
+   
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="pagecontainer">
+
+        <div class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="Default.aspx" > <span> </span>
+                    <img alt="" class="auto-style1" src="" /></a>&nbsp;<asp:LoginView ID="LoginView2" runat="server">
+              <AnonymousTemplate>
+                  You are not logged in<br /> <a href="/CreateAccount.aspx">Create Account</a><br /> <a href="/Login.aspx">Login</a>
+              </AnonymousTemplate>
+              <LoggedInTemplate>
+                  Welcome back
+                  <asp:LoginName ID="LoginName1" runat="server" />
+                  <br />
+                  <a href="/LogOut.aspx">LogOut</a>
+              </LoggedInTemplate>
+          </asp:LoginView>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="/Default.aspx">Home</a></li>
+                        <li><a href="/ViewMoviesByVenue.aspx">Movies By Cinema</a></li>
+                        <li><a href="/MoviesCurrentlyShowing.aspx">Movies Showing</a></li>
+                        <li><a href="Customers/CreateABooking.aspx">Book Tickets</a></li>
+                        <li><a href="/CreateAccount.aspx">Register</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div> 
+              
+
+      <div class ="content">
+          
+          <div class="menu">
+              <asp:TreeView ID="TreeView1" runat="server"
+                   DataSourceID="SiteMapDataSource1" Height="111px" Width="16px">
+              </asp:TreeView>
+              <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+          </div>      
+
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                 
+            </asp:ContentPlaceHolder> 
+          </div>
+       
+      <div class="footer">
+          &nbsp;</div>      
+    </div>
+  </form>
+    
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/owl.carousel.js"></script>
+    <script>
+
+
+        $(document).ready(function () {
+
+            $("#owl-demo").owlCarousel({
+
+                autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+                items: 4,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [979, 3]
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <!--<siteMapNode url="" title="Menu"  description="">-->
+  <siteMapNode url="/Default.aspx" title="Home">
+  <siteMapNode url="Account/AllProfiles.aspx" title="All Profiles"  description=""/>
+      <siteMapNode url="Account/UsersWithoutProfiles.aspx" title="Users Without Profiles"  description=""/>
+        <siteMapNode url="Account/CreateUser.aspx" title="Create A User"/>
+        <siteMapNode url="Account/EditBookings.aspx" title="Edit Bookings"/>
+        <siteMapNode url="Account/AddMovie.aspx" title="Add A Movie"/>
+        <siteMapNode url="Customers/MyProfile.aspx" title="My Profile" />
+      <siteMapNode url="Customers/ChangeProfile.aspx" title="Change Profile" />
+      <siteMapNode url="Customers/ChangePassword.aspx" title="Change Password" />
+        <siteMapNode url="Customers/MyBooking.aspx" title="My Bookings" />
+        <siteMapNode url="Customers/CreateABooking.aspx" title="Book Tickets" />
+        <siteMapNode url="Customers/Logout.aspx" title="Logout" />
+      <!--</siteMapNode>-->
+  </siteMapNode> 
+</siteMap>
